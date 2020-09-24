@@ -1,0 +1,85 @@
+[data-menu="button"] {
+  position: relative;
+
+  display: none;
+  align-items: center;
+  
+  width: 25px;
+  height: 20px;
+  margin: 8px;
+  
+  cursor: pointer;
+  z-index: 300;
+}
+
+[data-menu="button"] .one,
+[data-menu="button"] .two,
+[data-menu="button"] .three {
+  position: absolute;
+  background-color: #000;
+  border-radius: 5px;
+
+  width: 100%;
+  height: 4px;
+  transition: 0.5s ease;
+
+}
+
+[data-menu="button"] .one {
+  top: 0;
+  left: 0;
+}
+[data-menu="button"] .two {
+  bottom: 0px;
+  left: 0;
+}
+
+[data-menu="button"].ativo .one {
+  transform: rotate(45deg);
+  top: 10px;
+}
+[data-menu="button"].ativo .two {
+  transform: rotate(-45deg);
+  top: 10px;
+}
+
+[data-menu="button"].ativo .three {
+  opacity: 0;
+}
+
+
+
+
+@media (max-width: 700px) {
+  .menu {
+    position: relative;
+  }
+  
+  .js [data-menu="list"]{
+    position: absolute;
+    display: none;
+    background-color: #FB5;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2);
+
+    padding: 60px 0 20px 0;
+
+    top:0;
+    
+    width: 160px;
+    z-index: 200;
+  }
+
+  .js [data-menu="list"].ativo {
+    display: inline-block;
+    animation: show-right .5s ease;
+  }
+
+  .menu .menu__dropdown {
+    position: static;
+    border: none;
+  }
+  
+  [data-menu="button"] {
+    display: flex;
+  }
+}

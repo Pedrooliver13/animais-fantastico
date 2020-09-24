@@ -1,0 +1,16 @@
+/* base */
+@import 'base/reset.css';
+@import 'base/global.css';
+@import 'base/grid.css';
+
+/* components */
+@import 'components/menu.css';
+@import 'components/menu-mobile.css';
+@import 'components/scroll.css';
+@import 'components/grid-section.css';
+@import 'components/animais.css';
+@import 'components/faq.css';
+@import 'components/contato.css';
+@import 'components/tooltip.css';
+@import 'components/footer.css';
+@import 'components/modal.css';

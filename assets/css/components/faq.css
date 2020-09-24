@@ -1,0 +1,52 @@
+.faq-lista {
+  grid-column: 2 / 4
+}
+
+.faq-lista dt {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
+  color: #E54;
+
+  cursor: pointer;
+}
+
+.faq-lista dt::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-right: 10px;
+  background: #FB5;
+}
+
+.faq-lista dd {
+  font-family: Helvetica, Arial;
+  margin-bottom: .5rem;
+  margin-left: 30px;
+}
+
+/* ACCORDION */
+.js [data-menu="accordion"] dd{
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all .3s ease-in;
+}
+
+[data-menu="accordion"] dd.js-ativo {
+  display: block;
+  visibility: visible;
+
+  max-height: 150px;
+  opacity: 1;
+}
+
+
+@media (max-width: 700px) {
+  .faq-lista {
+    grid-column: 1 / 3;
+  }
+}
