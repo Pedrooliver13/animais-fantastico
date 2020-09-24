@@ -1,7 +1,8 @@
-'use strict';
-
+"use strict";
 export function initSmoothScroll() {
-  const linkInternos = document.querySelectorAll('[data-scroll="smooth"] a[href^="#"]');
+  const linkInternos = document.querySelectorAll(
+    '[data-scroll="smooth"] a[href^="#"]'
+  );
 
   function handleSmoothScroll(event) {
     event.preventDefault();
@@ -20,27 +21,25 @@ export function initSmoothScroll() {
   });
 }
 
-
 export function initAnimaScroll() {
-  const sections = document.querySelectorAll("[data-anime='scroll']");
-  
+  const sections = document.querySelectorAll('[data-anime="scroll"]');
   if (sections.length) {
-    const windowMedate = window.innerHeight * 0.6;
-    sections[0].classList.add('js-ativo');
+    const windowMetade = window.innerHeight * 0.6;
 
-    function handleAnimaScroll() {
-      sections.forEach((item) => {
-        const sectionTop = item.getBoundingClientRect().top;
-        const isSectionTopVisible = sectionTop - windowMedate < 0;
+    function animaScroll() {
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const isSectionVisible = sectionTop - windowMetade < 0;
 
-        if (isSectionTopVisible) {
-          item.classList.add("js-ativo");
-        } else {
-          item.classList.remove("js-ativo");
-        }
+        if (isSectionVisible)
+          section.classList.add("ativo");
+        else if (section.classList.contains("ativo"))
+          section.classList.remove("ativo");
       });
     }
 
-    window.addEventListener("scroll", handleAnimaScroll);
+    animaScroll();
+
+    window.addEventListener("scroll", animaScroll);
   }
 }

@@ -21,6 +21,17 @@
   background: #FB5;
 }
 
+.js .faq-lista dt::after {
+  content: "▼";
+  margin-left: 8px;
+  
+  transition: .4s ;
+}
+
+.js .faq-lista dt.js-ativo::after {
+  content: "▲";
+}
+
 .faq-lista dd {
   font-family: Helvetica, Arial;
   margin-bottom: .5rem;

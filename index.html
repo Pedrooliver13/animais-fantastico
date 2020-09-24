@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Animais Fantásticos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="https://www.origamid.com/favicon.ico">
+    <!-- <link rel="shortcut icon" href="https://www.origamid.com/favicon.ico" /> -->
     <link
       href="https://fonts.googleapis.com/css?family=Playfair+Display+SC"
       rel="stylesheet"
@@ -23,22 +23,11 @@
     </script>
   </head>
   <body>
-    <!-- <section class="section-cronometro">
-      <button data-time="start" disable>Start</button>
-      <button data-time="pause">Pause</button>
-      <button data-time="reset">Reset</button>
-
-      <div class="section-cronometro__time" data-time="time"></div>
-    </section> -->
 
     <section class="grid-container">
       <nav class="menu">
         <!-- aria-expanded, diz que está escondido, aria-controls diz que ele controla o menu -->
-        <div
-          data-menu="button"
-          aria-expanded="false"
-          aria-controls="menu"
-        >
+        <div data-menu="button" aria-expanded="false" aria-controls="menu">
           <div class="one"></div>
           <div class="two"></div>
           <div class="three"></div>
@@ -247,6 +236,28 @@
             semelhantes às pupilas verticais dos felídeos.
           </dd>
         </dl>
+      </section>
+
+      <section class="grid-section numbers" data-anime="scroll">
+        <h1 class="titulo">Números</h1>
+        <div class="numbers__grid">
+          <div class="number__animal">
+            <h3>Lobos</h3>
+            <span data-number="">4874</span>
+          </div>
+          <div class="number__animal">
+            <h3>Raposas</h3>
+            <span data-number="">5374</span>
+          </div>
+          <div class="number__animal">
+            <h3>Esquilos</h3>
+            <span data-number="">12340</span>
+          </div>
+          <div class="number__animal">
+            <h3>Ursos</h3>
+            <span data-number="">230</span>
+          </div>
+        </div>
       </section>
 
       <section class="grid-section contato" data-anime="scroll" id="contato">
