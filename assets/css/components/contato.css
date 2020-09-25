@@ -8,6 +8,7 @@
 }
 
 .dados li {
+  position: relative;
   margin-bottom: 1rem;
   font-family: Helvetica, Arial;
 }
@@ -20,6 +21,37 @@
   margin-right: 10px;
   background: #FB5;
 }
+
+[data-week]::after {
+  content: '';
+
+  display: inline-block;
+  
+  background-color: red;
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+
+  margin-left: 8px;
+}
+
+
+.js [data-week].ativo::after {
+  content: '';
+
+  display: inline-block;
+  
+  background-color: green;
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+
+  margin-left: 8px;
+}
+
+
 
 @media (max-width: 700px) {
   .dados, .mapa {

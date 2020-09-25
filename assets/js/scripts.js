@@ -6,6 +6,7 @@ import initAccordionList from "./module/accordion-list.js";
 import initModal from "./module/modal.js";
 import initTooltip from "./module/tooltip.js";
 import initAnimaNumbers from "./module/anima-numbers.js";
+import initWorkOperation from './module/work-operation.js';
 // import initExercicio from './module/exercicio.js';
 
 initAnimaScroll();
@@ -17,6 +18,7 @@ initAccordionList();
 initTooltip(); // tooltip => modalzinho quando passa o mouse por cima
 initModal();
 initAnimaNumbers();
+initWorkOperation();
 
 
 
