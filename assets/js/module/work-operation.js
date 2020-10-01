@@ -1,17 +1,15 @@
 export default function initWorkOperation() {
   const operation = document.querySelector('[data-week]');
-  const dateWeek = operation.dataset.week.split(',').map(Number);
-  const dateHours = operation.dataset.hours.split(',').map(Number);
+  const dayWeek = operation.dataset.week.split(',').map(Number);
+  const dayHours = operation.dataset.hours.split(',').map(Number);
 
+  const now = new Date();
+  const dayNow = now.getDay(); 
+  const hoursNow = now.getHours();
 
-  const nowDate = new Date(); // aqui vai pegar a data;
-  const nowDateWeek = nowDate.getDay(); // getDay retorna um dia da semana;
-  const nowDateHours = nowDate.getHours();
+  const dateOperation = dayWeek.indexOf(dayNow) !== -1;
+  const hoursOperation = hoursNow >= dayHours[0] && hoursNow < dayHours[1];
 
-  const dayOpen = dateWeek.indexOf(nowDateWeek) !== -1;
-  const hoursOpen = nowDateHours >= dateHours[0] && nowDateHours < dateHours[1];
-
-  if(hoursOpen && dayOpen) {
+  if(dateOperation && hoursOperation) 
     operation.classList.add('ativo');
-  }
 }
