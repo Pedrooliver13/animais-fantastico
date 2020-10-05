@@ -1,20 +1,26 @@
-'use strict'
+export default class initAccordionList {
+  constructor(list) {
+    this.accordionList = document.querySelectorAll(list);
+    this.activeClass = "js-ativo";
+  }
 
-export default function initAccordionList() {
-  const accordionList = document.querySelectorAll("[data-menu='accordion'] dt");
-  const activeClass = "js-ativo";
+  handleToggleList(item) {
+    item.classList.toggle(this.activeClass);
+    item.nextElementSibling.classList.toggle(this.activeClass);
+  }
 
-  if (accordionList.length) {
-    accordionList[0].classList.add(activeClass);
-    accordionList[0].nextElementSibling.classList.add(activeClass);
-
-    function handleAccordionList() {
-      this.classList.toggle(activeClass);
-      this.nextElementSibling.classList.toggle(activeClass);
+  accordionListener() {
+    this.accordionList.forEach((item) => {
+      item.addEventListener("click", () => this.handleToggleList(item));
+    });
+  }
+  
+  init() {
+    if (this.accordionList.length) {
+      this.handleToggleList(this.accordionList[0]);
+      this.accordionListener();
     }
 
-    accordionList.forEach((item) => {
-      item.addEventListener("click", handleAccordionList);
-    });
+    return this;
   }
 }
