@@ -5,8 +5,10 @@ import initNavTab from "./module/nav-tab.js";
 import initAccordionList from "./module/accordion-list.js";
 import initModal from "./module/modal.js";
 import initTooltip from "./module/tooltip.js";
-import initAnimaNumbers from "./module/anima-numbers.js";
 import initWorkOperation from './module/work-operation.js';
+import initAnimalFetch from './module/animais-fetch.js';
+import initBitcoinFetch from './module/bitcoin-fetch.js';
+import Countdown from './module/countdown.js';
 // import initExercicio from './module/exercicio.js';
 
 initAnimaScroll();
@@ -17,8 +19,16 @@ initNavTab();
 initAccordionList();
 initTooltip(); // tooltip => modalzinho quando passa o mouse por cima
 initModal();
-initAnimaNumbers();
 initWorkOperation();
+initAnimalFetch();
+initBitcoinFetch();
+
+const timeOfChrismas = new Countdown('25 December 2020 23:59:59 GMT-0300');
+setInterval(()=> {
+  console.log(timeOfChrismas.total)
+}, 1000)
+
+console.log(timeOfChrismas);
 
 
 
