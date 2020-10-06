@@ -4,7 +4,7 @@ import SmoothScroll from "./module/smooth-scroll.js";
 import NavTab from "./module/nav-tab.js";
 import Modal from "./module/modal.js";
 import Tooltip from "./module/tooltip.js";
-import initWorkOperation from "./module/work-operation.js";
+import WorkOperation from "./module/work-operation.js";
 import initAnimalFetch from "./module/animais-fetch.js";
 import initBitcoinFetch from "./module/bitcoin-fetch.js";
 import Accordion from "./module/accordion-list.js";
@@ -28,8 +28,11 @@ const modal = new Modal(
 );
 modal.init();
 
-const menuDropdown = new MenuDropdown('[data-dropdown]');
-menuDropdown.init()
+const menuDropdown = new MenuDropdown("[data-dropdown]");
+menuDropdown.init();
+
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
 
 const navTab = new NavTab(".js-animais li", "[data-tab='content'] section");
 navTab.init();
@@ -37,10 +40,9 @@ navTab.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
-const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
-menuMobile.init();
+const workOperation = new WorkOperation("[data-week]");
+workOperation.init();
 
-initWorkOperation();
 initAnimalFetch();
 initBitcoinFetch();
 
