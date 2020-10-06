@@ -1,5 +1,5 @@
 import MenuDropdown from "./module/menu-dropdown.js";
-import initMenuMobile from "./module/menu-mobile.js";
+import MenuMobile from "./module/menu-mobile.js";
 import SmoothScroll from "./module/smooth-scroll.js";
 import NavTab from "./module/nav-tab.js";
 import Modal from "./module/modal.js";
@@ -37,7 +37,9 @@ navTab.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
-initMenuMobile();
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
+
 initWorkOperation();
 initAnimalFetch();
 initBitcoinFetch();
