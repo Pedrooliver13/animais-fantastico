@@ -40,6 +40,7 @@ tooltip.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
+
 initWorkOperation();
 initAnimalFetch();
 initBitcoinFetch();
