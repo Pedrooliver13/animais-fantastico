@@ -1,4 +1,4 @@
-import initMenuDropDown from "./module/menu-dropdown.js";
+import MenuDropdown from "./module/menu-dropdown.js";
 import initMenuMobile from "./module/menu-mobile.js";
 import SmoothScroll from "./module/smooth-scroll.js";
 import initNavTab from "./module/nav-tab.js";
@@ -24,7 +24,9 @@ accordion.init();
 const modal = new Modal('[data-modal="open"]', '[data-modal="close"]', '[data-modal="container"]');
 modal.init();
 
-initMenuDropDown();
+const menuDropdown = new MenuDropdown('[data-dropdown]');
+menuDropdown.init()
+
 initMenuMobile();
 initNavTab();
 initTooltip(); // tooltip => modalzinho quando passa o mouse por cima
