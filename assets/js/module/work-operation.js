@@ -1,15 +1,40 @@
-export default function initWorkOperation() {
-  const operation = document.querySelector('[data-week]');
-  const dayWeek = operation.dataset.week.split(',').map(Number);
-  const dayHours = operation.dataset.hours.split(',').map(Number);
+export default class WorkOperation {
+  constructor(days) {
+    this.operation = document.querySelector(days);
+  }
 
-  const now = new Date();
-  const dayNow = now.getDay(); 
-  const hoursNow = now.getHours();
+  // dias e horas de trabalho.
+  dateOperation() {
+    this.workWeek = this.operation.dataset.week.split(",").map(Number);
+    this.hoursWork = this.operation.dataset.hours.split(",").map(Number);
+  }
 
-  const dateOperation = dayWeek.indexOf(dayNow) !== -1;
-  const hoursOperation = hoursNow >= dayHours[0] && hoursNow < dayHours[1];
+  // pega o dia e as horas atual.
+  dateNow() {
+    this.now = new Date();
+    this.dayNow = this.now.getDay();
+    this.hoursNow = this.now.getUTCHours() - 3;
+  }
 
-  if(dateOperation && hoursOperation) 
-    operation.classList.add('ativo');
+  // Lógica para ver se está aberto
+  isOpen() {
+    const dateOperation = this.workWeek.indexOf(this.dayNow) !== -1;
+    const hoursOperation =
+      (this.hoursNow >= this.hoursWork[0] && this.hoursNow < this.hoursWork[1]);
+      
+    return (dateOperation && hoursOperation);
+  }
+  
+  addClassActive() {
+    if (this.isOpen())
+      this.operation.classList.add("ativo");
+  }
+  
+  init() {
+    this.dateNow();
+    this.dateOperation();
+    this.addClassActive();
+
+    return this;
+  }
 }
