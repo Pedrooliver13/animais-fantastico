@@ -3,7 +3,7 @@ import initMenuMobile from "./module/menu-mobile.js";
 import SmoothScroll from "./module/smooth-scroll.js";
 import NavTab from "./module/nav-tab.js";
 import Modal from "./module/modal.js";
-import initTooltip from "./module/tooltip.js";
+import Tooltip from "./module/tooltip.js";
 import initWorkOperation from "./module/work-operation.js";
 import initAnimalFetch from "./module/animais-fetch.js";
 import initBitcoinFetch from "./module/bitcoin-fetch.js";
@@ -34,8 +34,10 @@ menuDropdown.init()
 const navTab = new NavTab(".js-animais li", "[data-tab='content'] section");
 navTab.init();
 
+const tooltip = new Tooltip("[data-tooltip]");
+tooltip.init();
+
 initMenuMobile();
-initTooltip(); // tooltip => modalzinho quando passa o mouse por cima
 initWorkOperation();
 initAnimalFetch();
 initBitcoinFetch();
