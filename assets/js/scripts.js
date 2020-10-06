@@ -1,4 +1,4 @@
-import initMenuDropDown from "./module/menu-dropdown.js";
+import MenuDropdown from "./module/menu-dropdown.js";
 import initMenuMobile from "./module/menu-mobile.js";
 import SmoothScroll from "./module/smooth-scroll.js";
 import NavTab from "./module/nav-tab.js";
@@ -28,10 +28,12 @@ const modal = new Modal(
 );
 modal.init();
 
+const menuDropdown = new MenuDropdown('[data-dropdown]');
+menuDropdown.init()
+
 const navTab = new NavTab(".js-animais li", "[data-tab='content'] section");
 navTab.init();
 
-initMenuDropDown();
 initMenuMobile();
 initTooltip(); // tooltip => modalzinho quando passa o mouse por cima
 initWorkOperation();
