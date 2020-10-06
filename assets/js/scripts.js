@@ -5,7 +5,7 @@ import NavTab from "./module/nav-tab.js";
 import Modal from "./module/modal.js";
 import Tooltip from "./module/tooltip.js";
 import WorkOperation from "./module/work-operation.js";
-import initAnimalFetch from "./module/animais-fetch.js";
+import initFetch from "./module/animais-fetch.js";
 import initBitcoinFetch from "./module/bitcoin-fetch.js";
 import Accordion from "./module/accordion-list.js";
 import AnimaScroll from "./module/anima-scroll.js";
@@ -43,7 +43,8 @@ tooltip.init();
 const workOperation = new WorkOperation("[data-week]");
 workOperation.init();
 
-initAnimalFetch();
+initFetch('./animaisapi.json', ".numbers__grid");
+
 initBitcoinFetch();
 
 // const timeOfChrismas = new Countdown('25 December 2020 23:59:59 GMT-0300');
