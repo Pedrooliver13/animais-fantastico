@@ -9,6 +9,8 @@ import initFetch from "./module/animais-fetch.js";
 import Bitcoin from "./module/bitcoin-fetch.js";
 import Accordion from "./module/accordion-list.js";
 import AnimaScroll from "./module/anima-scroll.js";
+import { SlideNav } from './module/slide.js';
+
 // import Countdown from './module/countdown.js';
 // import initExercicio from './module/exercicio.js';
 
@@ -45,6 +47,10 @@ workOperation.init();
 
 const bitcoin = new Bitcoin("https://blockchain.info/ticker", "[data-bitcoin]");
 bitcoin.init();
+
+const slide = new SlideNav('[data-slide="slide"]', '[data-slide="container"]');
+slide.init();
+slide.addControl('[data-slide="control"]')
 
 initFetch('./animaisapi.json', ".numbers__grid");
 // const timeOfChrismas = new Countdown('25 December 2020 23:59:59 GMT-0300');

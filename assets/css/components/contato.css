@@ -51,6 +51,14 @@
   margin-left: 8px;
 }
 
+.js [data-bitcoin] {
+  font-weight: bold;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #17d617;
+  color: #fff;
+}
+
 
 
 @media (max-width: 700px) {

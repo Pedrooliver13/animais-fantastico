@@ -5,7 +5,7 @@ export default class Bitcoin {
   }
 
   // faz o uso da api
-  static async handleFetch() {
+  async handleFetch() {
     const results = await fetch(this.url);
     const resultsJson = await results.json();
 
