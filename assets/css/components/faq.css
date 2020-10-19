@@ -22,14 +22,20 @@
 }
 
 .js .faq-lista dt::after {
-  content: "▼";
+  content: "";
+  background: url('../../img/arrow-red.svg')no-repeat center center;
+
+  display: inline-block;
+  width: 10px;
+  height: 10px;
   margin-left: 8px;
-  
+
+  transform: rotate(90deg);
   transition: .4s ;
 }
 
 .js .faq-lista dt.js-ativo::after {
-  content: "▲";
+  transform: rotate(-90deg);
 }
 
 .faq-lista dd {

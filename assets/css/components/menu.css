@@ -26,6 +26,14 @@
   cursor: pointer;
 }
 
+/* svg */
+.arrow-black {
+  display: inline-block;
+  width: 8px;
+  height: 10px;
+  background: url('../../img/arrow-black.svg')no-repeat;
+}
+
 [data-dropdown] {
   position: relative;
 }
@@ -51,12 +59,10 @@
   }
 }
 
-
 [data-dropdown] .menu__dropdown {
   position: absolute;
 
   top: 38px;
-  
   background-color: #e54;
   border: 2px solid #222;
   z-index: 200;
