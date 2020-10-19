@@ -14,8 +14,8 @@
 
 .slide li {
   flex-shrink: 0;
+  max-width: 900px;
   width: 80vw;
-  max-width: 500px;
   margin: 20px 5px;
 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
@@ -48,6 +48,7 @@
   overflow: hidden;
   cursor: pointer;
   
+  object-fit: cover;
   object-position: center center;
   
   width: 62px;
