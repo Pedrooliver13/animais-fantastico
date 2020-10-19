@@ -15,7 +15,7 @@ export default class SmoothScroll {
   }
 
   ScrollToSection(event) {
-    console.log(this); // ta pegando o target não o objeto como this; e para ele pegar o objeto do options vamoos usar o bind
+    // ta pegando o target não o objeto como this; e para ele pegar o objeto do options vamoos usar o bind
     event.preventDefault();
 
     const href = event.currentTarget.getAttribute("href");
